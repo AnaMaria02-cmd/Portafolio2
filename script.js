@@ -11,3 +11,12 @@ document.querySelectorAll('.slider').forEach(slider => {
   slider.querySelector('.next').addEventListener('click', () => showSlide(index + 1));
   slider.querySelector('.prev').addEventListener('click', () => showSlide(index - 1));
 });
+
+const menuToggle = document.getElementById('toggle');
+const navLinks = document.querySelectorAll('.list a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menuToggle.checked = false;
+    });
+});
